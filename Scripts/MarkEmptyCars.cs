@@ -233,10 +233,10 @@ public class Patch_XUiC_LootWindowGroup_OnClose
             lootList = lootList.ToLower();
 
             // Check if it is a car/vehicle
-            bool isVehicle = blockName.Contains("car") || 
+            bool isVehicle = (blockName.Contains("car") && !blockName.Contains("parts") && !blockName.Contains("cart") && !blockName.Contains("cardboard")) || 
                              blockName.Contains("sedan") || 
                              blockName.Contains("suv") || 
-                             blockName.Contains("truck") || 
+                             (blockName.Contains("truck") && !blockName.Contains("tiltTruck")) || 
                              blockName.Contains("ambulance") || 
                              blockName.Contains("bus") ||
                              blockName.Contains("pickup") ||
@@ -244,10 +244,11 @@ public class Patch_XUiC_LootWindowGroup_OnClose
                              blockName.Contains("police") ||
                              blockName.Contains("taxi") ||
                              blockName.Contains("tractor") ||
-                             blockName.Contains("fire") ||
+                             blockName.Contains("firetruck") ||
                              blockName.Contains("delivery") ||
-                             lootList.Contains("car") ||
-                             lootList.Contains("vehicle");
+                             lootList.Contains("vehicle") ||
+                             lootList.Contains("cars");
+                            
 
             if (!isVehicle) return;
 
