@@ -1,0 +1,20 @@
+# Visual Studio / IDE specific files
+.vs/
+*.user
+*.suo
+*.userprefs
+*.ide
+
+# Temporary Build-Files and Compiler-Outputs
+obj/
+*.log
+
+# OS generated Files
+.DS_Store
+Thumbs.db
+
+# My own ignore rules
+Compile.bat
+docs_dev/
+blob/
+

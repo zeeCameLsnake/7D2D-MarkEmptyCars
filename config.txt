@@ -1,0 +1,16 @@
+# MarkEmptyCars Configuration File
+# --------------------------------
+# Set debug=true to enable diagnostic logging to the game's output log and F1 console.
+# Set debug=false to disable diagnostic logging (recommended for normal gameplay).
+
+debug=false
+
+# Client-Only Server Fallback Marker:
+# If the server doesn't have the mod installed, which vanilla marker should be used instead?
+#
+# Some options to try:
+#   - vending_machine (20m range, clean UI)
+#   - twitch_vote_minion_shield (64m range, but very solid icon)
+#   - treasure (very high range, strong UI clutter)
+#
+FallbackMarker=vending_machine
