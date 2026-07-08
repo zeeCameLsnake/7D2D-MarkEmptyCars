@@ -2,7 +2,7 @@
 <xml>
 	<Name value="zCs_MarkEmptyCars" />
 	<DisplayName value="Mark Empty Cars" />
-	<Version value="1.1.1" />
+	<Version value="1.1.2" />
 	<Description value="Places an open chest symbol inside vehicles once they have been fully looted." />
 	<Author value="zeeCameLsnake" />
 	<Website value="www.nexusmods.com/7daystodie/mods/11081" />
