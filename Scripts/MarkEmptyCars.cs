@@ -698,17 +698,19 @@ public static class EmptyCarScanner
             if (block == null) return;
             string blockName = block.GetBlockName().ToLower();
 
-            bool isVehicle = false;
-            if (!blockName.Contains("shopping") && !blockName.Contains("tilt")) 
-            {
-                isVehicle = blockName.Contains("cntcar") || blockName.Contains("sedan") || blockName.Contains("truck") ||
-                            blockName.Contains("suv") || blockName.Contains("minivan") || blockName.Contains("police") ||
-                            blockName.Contains("ambulance") || blockName.Contains("fire") || blockName.Contains("delivery") ||
-                            blockName.Contains("tractor") || blockName.Contains("bus");
-            }
-
-            // In 7D2D, wrenched cars become 'Damage1' or 'Damage2'. We want to ignore them.
-            if (blockName.Contains("damage")) return;
+            bool isVehicle = (blockName.Contains("car") && !blockName.Contains("parts") && !blockName.Contains("cart") && !blockName.Contains("cardboard")) || 
+                             blockName.Contains("sedan") || 
+                             blockName.Contains("suv") || 
+                             (blockName.Contains("truck") && !blockName.Contains("tiltTruck")) || 
+                             blockName.Contains("ambulance") || 
+                             blockName.Contains("bus") ||
+                             blockName.Contains("pickup") ||
+                             blockName.Contains("minivan") ||
+                             blockName.Contains("police") ||
+                             blockName.Contains("taxi") ||
+                             blockName.Contains("tractor") ||
+                             blockName.Contains("firetruck") ||
+                             blockName.Contains("delivery");
 
             // Extract IsEmpty
             MethodInfo mIsEmpty;
